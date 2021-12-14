@@ -22,24 +22,24 @@ int main()
 
     printf("\n");
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        for (int j = 1; j < n; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if (array[i] > array[j])
+            if (array[j] > array[j + 1])
             {
 
-                temp = array[i];
-                array[i] = array[j];
-                array[i] = temp;
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
             }
         }
     }
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     printf("%d ", array[i]);
-    // }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", array[i]);
+    }
 
     return 0;
 }
