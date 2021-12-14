@@ -3,7 +3,7 @@
 int main()
 {
 
-    int n;
+    int n, temp;
     printf("Enter the number of elements = ");
     scanf("%d", &n);
     int array[n];
@@ -13,24 +13,33 @@ int main()
         scanf("%d", &array[i]);
     }
 
+    printf("\n");
+
     for (int i = 0; i < n; i++)
     {
-        printf("%d", &array[i]);
+        printf("%d ", array[i]);
     }
 
+    printf("\n");
+
     for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; j < n; j++)
+        for (int j = 1; j < n; j++)
         {
-            if (array[i] != array[j])
+            if (array[i] > array[j])
             {
 
-                int temp = array[i];
+                temp = array[i];
                 array[i] = array[j];
-                array[i];
+                array[i] = temp;
             }
         }
     }
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("%d ", array[i]);
+    // }
 
     return 0;
 }
