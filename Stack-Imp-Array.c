@@ -46,7 +46,7 @@ int main()
 void push()
 {
 
-    if (top == n)
+    if (top == n - 1)
     {
         printf("Stack Overflow\n");
     }
